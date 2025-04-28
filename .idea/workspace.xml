@@ -1,4 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69b0dcf8-9cfa-44c1-b259-0e9d9943f10e" name="Changes" comment="listagem, filtros, deletar e mudar status">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/front-test-NextJs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/tslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/queryProvider/queryProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/color-mode.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/toaster.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/tooltip.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/filters.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/inputSearchText.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/selectFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/userForm/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/activeActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/deleteAction.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/userTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useProfiles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useUsers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/profile.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/profile.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2wMfVQ4ky4qnKgiXQcZSisdjZhu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "js.linters.configure.manually.selectedtslint": "true",
+    "last_opened_file_path": "C:/Users/firmi/OneDrive/Área de Trabalho/front-test-NextJs/src/components/userList/usertable",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.tslint",
+    "ts.external.directory.path": "C:\\Users\\firmi\\OneDrive\\Área de Trabalho\\front-test-NextJs\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\firmi\OneDrive\Área de Trabalho\front-test-NextJs\src\components" />
+      <recent name="C:\Users\firmi\OneDrive\Área de Trabalho\front-test-NextJs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\firmi\OneDrive\Área de Trabalho\front-test-NextJs\src\components\userList\usertable" />
+      <recent name="C:\Users\firmi\OneDrive\Área de Trabalho\front-test-NextJs\src\components\provider" />
+      <recent name="C:\Users\firmi\OneDrive\Área de Trabalho\front-test-NextJs\src\components\userList\filters" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69b0dcf8-9cfa-44c1-b259-0e9d9943f10e" name="Changes" comment="" />
+      <created>1745856386731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745856386731</updated>
+      <workItem from="1745856388083" duration="697000" />
+      <workItem from="1745857116684" duration="3939000" />
+      <workItem from="1745861209987" duration="5854000" />
+      <workItem from="1745867414839" duration="11805000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="listagem, filtros, deletar e mudar status" />
+    <option name="LAST_COMMIT_MESSAGE" value="listagem, filtros, deletar e mudar status" />
+  </component>
 </project>
