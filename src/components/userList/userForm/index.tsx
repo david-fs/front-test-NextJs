@@ -9,13 +9,13 @@ import {
   Fieldset,
   RadioGroup,
   Flex,
-  Switch, Icon,
+  Switch,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { User } from '@/models/user.model';
-import { MdEdit } from 'react-icons/md';
 import { useCreaterUser, useUpdateUser } from '@/hooks/useUsers';
+import { ButtonTrigger } from '@/components/userList/userForm/buttonTrigger';
 
 interface UserDrawerProps {
   headerTittle: string,
@@ -31,7 +31,7 @@ const profileOptions = [
 
 export function UserDrawer({ headerTittle, type, data }: UserDrawerProps) {
   const [open, setOpen] = useState(false);
-  const {mutate: create, isSuccess} = useCreaterUser()
+  const {mutate: create} = useCreaterUser()
   const {mutate: update} = useUpdateUser()
   const {
     register,
@@ -44,7 +44,6 @@ export function UserDrawer({ headerTittle, type, data }: UserDrawerProps) {
   }
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     if (type === 'Create') {
       create(data)
         handleClose()
@@ -65,12 +64,7 @@ export function UserDrawer({ headerTittle, type, data }: UserDrawerProps) {
       open={open}
       onOpenChange={(e) => setOpen(e.open)}
     >
-      <Drawer.Trigger asChild>
-        {type === 'Create' ? (<Button colorPalette="teal" variant="solid" h={42} w={150}>
-          Novo usuário
-        </Button>) : (<Icon cursor={'pointer'} as={MdEdit} fontSize={20} />)}
-
-      </Drawer.Trigger>
+      <ButtonTrigger type={type}></ButtonTrigger>
       <Portal>
         <Drawer.Backdrop />
         <Drawer.Positioner padding="4">
