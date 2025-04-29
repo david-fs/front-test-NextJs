@@ -1,10 +1,12 @@
-import { changeStatus, deleteUser, getUsers } from '@/services/user.service';
+import { changeStatus, createUser, deleteUser, getUsers, updateUser } from '@/services/user.service';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { toaster } from '@/components/ui/toaster';
 
 export const GET_USERS = "GET_USERS_QUERY";
 export const CHANGE_STATUS = "CHANGE_STATUS";
 export const DELETE_USER = "DELETE_USER";
+export const CREATE_USER = "CREATE_USER";
+export const UPDATE_USER = "UPDATE_USER";
 
 export function useGetUsers (searchTerm?: string, profileId?: string) {
     return useQuery({
@@ -43,6 +45,46 @@ export function useDeleteUser() {
         onSuccess: () => {
             toaster.create({
                 title: `Usuário deletado.`,
+                type: 'success',
+            })
+            queryClient.invalidateQueries({queryKey:[GET_USERS]});
+        },
+        onError: (err) => {
+            toaster.create({
+                title: err.message,
+                type: 'error',
+            })
+        }
+    })
+}
+
+export function useCreaterUser() {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationKey:[CREATE_USER],
+        mutationFn: createUser,
+        onSuccess: () => {
+            toaster.create({
+                title: `Usuário criado com sucesso.`,
+                type: 'success',
+            })
+            queryClient.invalidateQueries({queryKey:[GET_USERS]});
+        },
+        onError: (err) => {
+            toaster.create({
+                title: err.message,
+                type: 'error',
+            })
+        }
+    })
+}export function useUpdateUser() {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationKey:[UPDATE_USER],
+        mutationFn: updateUser,
+        onSuccess: () => {
+            toaster.create({
+                title: `Usuário editado com sucesso.`,
                 type: 'success',
             })
             queryClient.invalidateQueries({queryKey:[GET_USERS]});

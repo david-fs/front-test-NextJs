@@ -1,29 +1,163 @@
-import { Button, CloseButton, Drawer, Portal } from "@chakra-ui/react"
+import {
+  Button,
+  Field,
+  Input,
+  Stack,
+  Drawer,
+  Portal,
+  CloseButton,
+  Fieldset,
+  RadioGroup,
+  Flex,
+  Switch, Icon,
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import { User } from '@/models/user.model';
+import { MdEdit } from 'react-icons/md';
+import { useCreaterUser, useUpdateUser } from '@/hooks/useUsers';
 
-export function UserDrawer() {
+interface UserDrawerProps {
+  headerTittle: string,
+  type: string,
+  data?: User
+}
+
+const profileOptions = [
+  { value: '01', label: 'User' },
+  { value: '02', label: 'Root' },
+  { value: '03', label: 'Admin' },
+];
+
+export function UserDrawer({ headerTittle, type, data }: UserDrawerProps) {
+  const [open, setOpen] = useState(false);
+  const {mutate: create, isSuccess} = useCreaterUser()
+  const {mutate: update} = useUpdateUser()
+  const {
+    register,
+    handleSubmit,
+    control,
+  } = useForm<User>( { defaultValues: data || { profileId: '01', isActive: true } });
+
+  function handleClose() {
+    setOpen(!open);
+  }
+
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    if (type === 'Create') {
+      create(data)
+        handleClose()
+
+    } else {
+      update(data)
+        handleClose()
+
+    }
+  });
+
+
   return (
-    <Drawer.Root size={'lg'}>
+    <Drawer.Root
+      size={'lg'}
+      closeOnEscape={false}
+      closeOnInteractOutside={false}
+      open={open}
+      onOpenChange={(e) => setOpen(e.open)}
+    >
       <Drawer.Trigger asChild>
-        <Button colorPalette="teal" variant="solid"   h={42} w={150} >
+        {type === 'Create' ? (<Button colorPalette="teal" variant="solid" h={42} w={150}>
           Novo usuário
-        </Button>
+        </Button>) : (<Icon cursor={'pointer'} as={MdEdit} fontSize={20} />)}
+
       </Drawer.Trigger>
       <Portal>
         <Drawer.Backdrop />
         <Drawer.Positioner padding="4">
-          <Drawer.Content rounded="md">
+          <Drawer.Content rounded="md" p={8}>
             <Drawer.Header>
-              <Drawer.Title>Drawer Title</Drawer.Title>
+              <Drawer.Title>{headerTittle}</Drawer.Title>
             </Drawer.Header>
             <Drawer.Body>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <form>
+                <Stack gap="6" align="flex-start" maxW="sm" pt={8}>
+                  <Field.Root required>
+                    <Field.Label>Nome <Field.RequiredIndicator /></Field.Label>
+                    <Input pl={2} {...register('firstName')} />
+                  </Field.Root>
+
+                  <Field.Root required>
+                    <Field.Label>Sobrenome <Field.RequiredIndicator /></Field.Label>
+                    <Input pl={2} {...register('lastName')} />
+                  </Field.Root>
+
+                  <Field.Root required>
+                    <Field.Label>E-mail <Field.RequiredIndicator /></Field.Label>
+                    <Input type={'email'} pl={2} {...register('email')} />
+                  </Field.Root>
+
+                  <Fieldset.Root>
+                    <Fieldset.Legend>Selecione o perfil:</Fieldset.Legend>
+                    <Controller
+                      {...register('profileId')}
+                      control={control}
+                      render={({ field }) => (
+                        <RadioGroup.Root
+                          name={field.name}
+                          value={field.value}
+                          onValueChange={({ value }) => {
+                            field.onChange(value);
+                          }}
+                          colorPalette="teal"
+                        >
+                          <Flex gap="4" flexDirection={'column'} pt={6}>
+                            {profileOptions.map((item) => (
+                              <RadioGroup.Item key={item.value} value={item.value}>
+                                <RadioGroup.ItemHiddenInput onBlur={field.onBlur} />
+                                <RadioGroup.ItemIndicator />
+                                <RadioGroup.ItemText>{item.label}</RadioGroup.ItemText>
+                              </RadioGroup.Item>
+                            ))}
+                          </Flex>
+                        </RadioGroup.Root>
+                      )}
+                    />
+                  </Fieldset.Root>
+
+                  <Controller
+                    {...register('isActive')}
+                    control={control}
+                    render={({ field }) => (
+                      <Field.Root>
+                        <Switch.Root
+                          name={field.name}
+                          checked={field.value}
+                          onCheckedChange={({ checked }) => field.onChange(checked)}
+                          colorPalette={'green'}
+                        >
+                          <Switch.HiddenInput onBlur={field.onBlur} />
+                          <Switch.Control />
+                          <Switch.Label>Usuário está ativo?</Switch.Label>
+                        </Switch.Root>
+                      </Field.Root>
+                    )}
+                  />
+                </Stack>
+              </form>
             </Drawer.Body>
             <Drawer.Footer>
-              <Button variant="outline">Cancel</Button>
-              <Button>Save</Button>
+
+              <Button
+                colorPalette="red"
+                variant="solid"
+                w={32}
+                onClick={() => handleClose()}>Cancel</Button>
+              <Button
+                colorPalette="green"
+                variant="solid"
+                w={32}
+                onClick={() => onSubmit()}>Salvar</Button>
+
             </Drawer.Footer>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />
@@ -32,5 +166,5 @@ export function UserDrawer() {
         </Drawer.Positioner>
       </Portal>
     </Drawer.Root>
-  )
+  );
 }

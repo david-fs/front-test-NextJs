@@ -5,48 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69b0dcf8-9cfa-44c1-b259-0e9d9943f10e" name="Changes" comment="listagem, filtros, deletar e mudar status">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/front-test-NextJs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/tslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/queryProvider/queryProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/color-mode.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/provider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/toaster.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/tooltip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/filters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/inputSearchText.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/filters/selectFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/userForm/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/activeActions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/deleteAction.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/usertable/userTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useProfiles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useUsers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/profile.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/profile.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userList/userForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userList/userForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userList/usertable/userTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userList/usertable/userTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useUsers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUsers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -115,8 +84,17 @@
       <workItem from="1745856388083" duration="697000" />
       <workItem from="1745857116684" duration="3939000" />
       <workItem from="1745861209987" duration="5854000" />
-      <workItem from="1745867414839" duration="11805000" />
+      <workItem from="1745867414839" duration="18403000" />
     </task>
+    <task id="LOCAL-00001" summary="listagem, filtros, deletar e mudar status">
+      <option name="closed" value="true" />
+      <created>1745879503369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745879503369</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -20,7 +20,7 @@ export default function Home() {
         <Text  fontSize={20} fontWeight={700} >Lista de usuários</Text>
       </Box>
       <Box>
-        <UserDrawer></UserDrawer>
+        <UserDrawer headerTittle={'Novo usuário'} type={'Create'}></UserDrawer>
       </Box>
       <Box>
         <UserList></UserList>

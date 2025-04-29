@@ -1,9 +1,9 @@
 import {Flex, Icon, Table} from "@chakra-ui/react";
 import {columns} from "@/components/userList/constants";
 import {User} from "@/models/user.model";
-import { MdEdit } from "react-icons/md";
 import { ActiveActions } from '@/components/userList/usertable/activeActions';
 import { DeleteAction } from '@/components/userList/usertable/deleteAction';
+import { UserDrawer } from '@/components/userList/userForm';
 
 interface UserTableProps {
     data: User[]
@@ -34,7 +34,9 @@ export function UserTable({data}: UserTableProps) {
                             </Table.Cell>
                             <Table.Cell p={2}>
                                 <Flex gap={2}>
-                                    <Icon as={MdEdit} fontSize={20} />
+                                    <UserDrawer
+                                      headerTittle={`Editar usuário ${item.id}`} type={'Edit'}
+                                      data={item}></UserDrawer>
                                     <DeleteAction id={item.id}></DeleteAction>
                                 </Flex>
                             </Table.Cell>

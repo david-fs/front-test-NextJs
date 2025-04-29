@@ -15,3 +15,10 @@ export function changeStatus(id:string) {
 export function deleteUser(id:string) {
     return api.delete(`/user/delete/${id}`)
 }
+
+export function createUser(user: User) {
+    return api.post(`/user/create`, user);
+}
+export function updateUser(user: User) {
+    return api.put(`/user/update/${user.id}`, user);
+}
